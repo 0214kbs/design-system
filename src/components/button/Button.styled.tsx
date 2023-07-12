@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { getButtonStyles } from "./button.type";
+import { ButtonStyles } from "./button.type";
 
 const ButtonSizes = {
   small: `
@@ -16,7 +16,7 @@ const ButtonSizes = {
   `,
 };
 
-const StyledButton = styled.button<getButtonStyles>`
+const StyledButton = styled.button<ButtonStyles>`
   font-weight: 700;
   border : 0px;
   border-radius: 3em;

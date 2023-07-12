@@ -8,7 +8,7 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-export interface getButtonStyles {
+export interface ButtonStyles {
   primary?: boolean;
   bgcolor?: string;
   size?: "small" | "medium" | "large";
