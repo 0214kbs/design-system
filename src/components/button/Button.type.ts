@@ -1,15 +1,12 @@
-export interface ButtonProps {
-  primary?: boolean;
-  bgcolor?: string;
+export interface ButtonStyles {
+  color?: string;
+
   size?: "small" | "medium" | "large";
-  label: string;
+  label?: string;
+  // use?: "basic" | "error" | "warn" | "disable" | "secondary";
+  use?: string;
+  bgcolor?: string;
 
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-}
-
-export interface ButtonStyles {
-  primary?: boolean;
-  bgcolor?: string;
-  size?: "small" | "medium" | "large";
+  type?: "button" | "submit" | "reset";
 }
