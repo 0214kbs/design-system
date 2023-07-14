@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Button from "../button/Button";
+import { DropdownStyles } from "./Dropdown.type";
 
-const Dropdown = () => {
+const Dropdown = (props: DropdownStyles) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [dropdownheader, setDropdownHeader] = useState<string>("open");
 
@@ -13,11 +14,12 @@ const Dropdown = () => {
         setIsDropdownOpen(false);
     }
 
-    const options = ["childeren 1", "childeren 2", "childeren 3"];
+    const options = props.options;
+    const headercolor = props.headercolor || "#a2a2a2";
 
     return (
         <>
-            <Button onClick={handleDropdownState} label={dropdownheader}></Button>
+            <Button bgcolor={headercolor} onClick={handleDropdownState} label={dropdownheader}></Button>
             {isDropdownOpen && (
                 <div>
                     <ul>
