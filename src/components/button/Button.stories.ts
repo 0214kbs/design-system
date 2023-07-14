@@ -9,8 +9,9 @@ const meta = {
   },
   tags: ["autodocs"],
   argTypes: {
-    size: {
-      description: "버튼 크기 선택",
+    width: {
+      control: { type: 'text' },
+      description: "버튼 너비 설정",
     },
     label: {
       description: "버튼 컴포넌트 안에 표시되는 문자",
@@ -36,8 +37,8 @@ const meta = {
   args: {
     bgcolor: "#2938ff",
     color: "white",
+    width: "100px",
     use: "basic",
-    size: "medium",
     label: "Button",
     type: "button",
   },

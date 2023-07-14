@@ -1,14 +1,12 @@
 import styled, { css } from "styled-components";
 import { ButtonStyles } from "./button.type";
-import Button from "./Button";
 
 const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
   ${(props) => {
-    const size = props.size || "medium";
     const use = props.use || "basic";
     const bgcolor = props.bgcolor || "#2938ff";
     const color = props.color || "white";
-
+    const width = props.width || '100px';
     const UseStyles: any = {
       basic: `
         background-color: ${bgcolor};
@@ -47,30 +45,16 @@ const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
       `,
     };
 
-    const ButtonSizes = {
-      small: `
-      padding: 10px 16px;
-      font-size: 12px;
-    `,
-      medium: `
-      padding: 11px 20px;
-      font-size: 16px;
-    `,
-      large: `
-      padding: 12px 24px;
-      font-size: 20px;
-    `,
-    };
 
     return css`
       cursor: pointer;
       border: 0px;
       border-radius: 5px;
       line-height: 1;
-
+      padding: 10px;
+      width : ${width};
       ${UseStyles[use]};
-      ${ButtonSizes[size]}
-    `;
+      `;
   }};
 `;
 
