@@ -7,6 +7,6 @@ export interface ButtonStyles {
   use?: string;
   bgcolor?: string;
 
-  onClick?: () => void;
+  onClick?: (e: any) => any;
   type?: "button" | "submit" | "reset";
 }
