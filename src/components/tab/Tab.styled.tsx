@@ -13,7 +13,7 @@ const StyledTabMenu = styled.ul`
   margin: 0;
   list-style-type: none;
   
-  color: black;
+  color: white;
   font-weight: bold;
   font-size: 18px;
   padding: 5px 60px 0px 5px;

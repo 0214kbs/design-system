@@ -8,6 +8,12 @@ const meta = {
     },
     tags: ["autodocs"],
     argTypes: {
+        tabs: {
+            description: "tab menu 목록",
+        },
+        tabcontents: {
+            description: "각 tab의 내용",
+        },
     },
 };
 
