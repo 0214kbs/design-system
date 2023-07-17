@@ -14,7 +14,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const BasicDropDown: Story = {
+export const BasicDropdown: Story = {
   args: {
     options: ["child 1", "child 2", "child 3"],
     isshowselected: true,
@@ -30,7 +30,7 @@ export const NotShowSelectedDropdown: Story = {
   }
 }
 
-export const ScrollDropDown: Story = {
+export const ScrollDropdown: Story = {
   args: {
     options: ["child 1", "child 2", "child 3", "child 4", "child 5", "child 6"],
     isshowselected: true,

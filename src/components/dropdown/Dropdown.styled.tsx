@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { DropdownStyles } from "./Dropdown.type";
+import Check from "../../../public/check.svg"
 
 const StyledDropdownContainer = styled.div<DropdownStyles>`
   ${props =>
@@ -22,23 +23,26 @@ const StyledDropdownList = styled.ul<DropdownStyles>`
   margin: 0;
   padding: 0;
 
-  ${props =>
-    props.hassizelimit && css`
-      ::-webkit-scrollbar {
-        display: none;
-      }
-  `}
 `;
 
 const StyledDropdownItem = styled.li`
   padding: 8px;
-  text-align: center;
   cursor: pointer;
   transition: background-color 0.8s ease;
   font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   &:hover {
     background-color: #f0f0f0;
   }
-`;
+  `;
 
-export { StyledDropdownList, StyledDropdownItem, StyledDropdownContainer };
+const StyledText = styled.span`
+text-align: left;
+  
+`
+const StyledCheckImage = styled(Check)`
+  width: 14px;
+`
+export { StyledDropdownList, StyledDropdownItem, StyledDropdownContainer, StyledText, StyledCheckImage };

@@ -1,7 +1,9 @@
+'use client'
 import React, { useState } from "react";
+// import Check from "../../../public/check.svg"
 import Button from "../button/Button";
 import { DropdownStyles } from "./Dropdown.type";
-import { StyledDropdownContainer, StyledDropdownList, StyledDropdownItem } from "./Dropdown.styled";
+import { StyledDropdownContainer, StyledDropdownList, StyledDropdownItem, StyledText, StyledCheckImage } from "./Dropdown.styled";
 const Dropdown = (props: DropdownStyles) => {
   const options = props.options;
   const headercolor = props.headercolor || "#a2a2a2";
@@ -9,6 +11,7 @@ const Dropdown = (props: DropdownStyles) => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [dropdownheader, setDropdownHeader] = useState<string>("open");
+  const [checked, setChecked] = useState("");
 
   const handleDropdownState = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -20,6 +23,7 @@ const Dropdown = (props: DropdownStyles) => {
     };
     console.log(value);
     setIsDropdownOpen(false);
+    setChecked(value);
   };
 
 
@@ -31,7 +35,8 @@ const Dropdown = (props: DropdownStyles) => {
           <StyledDropdownList {...props}>
             {options.map((option) => (
               <StyledDropdownItem onClick={() => handleOptionClick(option)} key={Math.random()}>
-                {option}
+                <StyledText>{option}</StyledText>
+                {checked === option && <StyledCheckImage />}
               </StyledDropdownItem>
             ))}
           </StyledDropdownList>
