@@ -8,7 +8,24 @@ const meta = {
     layout: "centered",
   },
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    options: {
+      description: "Dropdown 내부 목록 옵션들",
+    },
+    headercolor: {
+      defaultValue: { summary: "Button's bgcolor" },
+      description: "Dropdown header 색깔",
+    },
+    isshowselected: {
+      defaultValue: { summary: "true" },
+      description: "Dropdown header에 선택한 옵션 노출 여부",
+    },
+    hassizelimit: {
+      defaultValue: { summary: "false" },
+      description: "Drodown 목록 크기 제한",
+    },
+
+  },
 };
 
 export default meta;
