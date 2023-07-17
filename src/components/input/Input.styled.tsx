@@ -4,7 +4,6 @@ import { InputStyles } from "./Input.type";
 const StyledInput = styled.input.attrs<InputStyles>((props) => ({
   placeholder: props.placeholder,
   name: props.name || "Basic Input",
-  disabled: props.use === "disable" ? true : false,
 }))`
 ${(props) => {
     const use = props.use || "basic"
@@ -48,7 +47,6 @@ ${(props) => {
       border-radius: 5px;
       padding: 5px;
       background-color: white;
-      /* box-sizing: border-box; */
      ${UseStyles[use]}
       `
   }}
