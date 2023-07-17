@@ -10,7 +10,7 @@ const meta = {
   tags: ["autodocs"],
   argTypes: {
     width: {
-      control: { type: 'text' },
+      control: { type: "text" },
       description: "버튼 너비 설정",
     },
     label: {
@@ -37,6 +37,7 @@ const meta = {
   args: {
     width: "100px",
     color: "white",
+    use: "basic",
     label: "Button",
     type: "button",
   },
@@ -45,11 +46,11 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const PrimaryBlueButton: Story = {
+export const PrimaryButton: Story = {
   args: {},
 };
 
-export const SecondaryBlueButton: Story = {
+export const SecondaryButton: Story = {
   args: {
     use: "secondary",
   },

@@ -3,8 +3,9 @@ import { ButtonStyles } from "./button.type";
 
 const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
   ${(props) => {
+    const middle = props.theme.colors.middle;
     const use = props.use || "basic";
-    const bgcolor = props.bgcolor || "#2938ff";
+    const bgcolor = props.bgcolor || middle;
     const color = props.color || "white";
     const width = props.width || '100px';
     const UseStyles: any = {

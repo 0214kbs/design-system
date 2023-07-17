@@ -10,8 +10,8 @@ const StyledDropdownContainer = styled.div<DropdownStyles>`
       &::-webkit-scrollbar {
         display: none;
       }
-    `}
-  border: 1px solid #afafaf;
+      `}
+  border: 1px solid ${props => props.theme.colors.gray};
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
@@ -26,13 +26,14 @@ const StyledDropdownList = styled.ul<DropdownStyles>`
 `;
 
 const StyledDropdownItem = styled.li`
-  padding: 8px;
+  padding: 8px 12px;
   cursor: pointer;
   transition: background-color 0.8s ease;
   font-size: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
   &:hover {
     background-color: #f0f0f0;
   }

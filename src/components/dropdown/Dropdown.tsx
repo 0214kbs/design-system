@@ -6,7 +6,7 @@ import { DropdownStyles } from "./Dropdown.type";
 import { StyledDropdownContainer, StyledDropdownList, StyledDropdownItem, StyledText, StyledCheckImage } from "./Dropdown.styled";
 const Dropdown = (props: DropdownStyles) => {
   const options = props.options;
-  const headercolor = props.headercolor || "#a2a2a2";
+  const headercolor = props.headercolor;
   const isShowSelected = props.isshowselected;
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
