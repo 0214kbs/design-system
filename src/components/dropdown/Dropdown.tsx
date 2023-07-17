@@ -1,4 +1,3 @@
-'use client'
 import React, { useState } from "react";
 // import Check from "../../../public/check.svg"
 import Button from "../button/Button";

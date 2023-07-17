@@ -4,6 +4,9 @@ import { ButtonStyles } from "./button.type";
 const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
   ${(props) => {
     const middle = props.theme.colors.middle;
+    const gray = props.theme.colors.gray;
+    const black = props.theme.colors.black;
+
     const use = props.use || "basic";
     const bgcolor = props.bgcolor || middle;
     const color = props.color || "white";
@@ -22,7 +25,7 @@ const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
       secondary: `
         background-color:white;
         border: 2px solid ${bgcolor};
-        color: #666666;
+        color: ${black};
         &:hover{
           opacity:0.5;
           background-color: #dbdada;
@@ -31,7 +34,7 @@ const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
 
       warn: `
         background-color: #f4fd6c;
-        color: #666666;
+        color: ${black};
       `,
 
       error: `
@@ -40,8 +43,8 @@ const StyledButton = styled.button.attrs<ButtonStyles>((props) => ({}))`
       `,
 
       disable: `
-        background-color: #cccccc;
-        color: #666666;
+        background-color: ${gray};
+        color: ${black};
         cursor: not-allowed;
       `,
     };
