@@ -4,9 +4,7 @@ import { ButtonStyles } from "./button.type";
 
 const Button = (props: ButtonStyles) => {
   return (
-    <>
-      <StyledButton {...props}>{props.label || "Button"}</StyledButton>
-    </>
+    <StyledButton {...props}>{props.label || "Button"}</StyledButton>
   );
 };
 

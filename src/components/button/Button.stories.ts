@@ -35,10 +35,8 @@ const meta = {
     },
   },
   args: {
-    bgcolor: "#2938ff",
     width: "100px",
     color: "white",
-    use: "basic",
     label: "Button",
     type: "button",
   },
