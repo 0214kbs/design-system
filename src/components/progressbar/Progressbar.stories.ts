@@ -9,7 +9,12 @@ const meta = {
     },
     tags: ["autodocs"],
     argTypes: {
-
+        value: {
+            description: "진행 정도",
+        },
+        max: {
+            description: "최댓값 (최대 100)",
+        },
     },
     args: {
     },
