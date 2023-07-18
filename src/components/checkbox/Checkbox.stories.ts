@@ -10,6 +10,15 @@ const meta = {
     tags: ["autodocs"],
     argTypes: {
 
+        text: {
+            description: "체크박스 옆에 표시되는 텍스트",
+        },
+        size: {
+            description: "크기 설정 ( 체크박스크기: size, 글자 크기 : size-3)",
+        },
+        islinethrough: {
+            description: "글자 중간에 선 긋기 여부 선택",
+        },
     },
     args: {
     },
