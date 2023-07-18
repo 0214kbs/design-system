@@ -9,7 +9,12 @@ const meta = {
     },
     tags: ["autodocs"],
     argTypes: {
-
+        name: {
+            description: "input요소의 값 정의",
+        },
+        value: {
+            description: "선택된 값이나 사용자가 입력한 값 선택"
+        },
         text: {
             description: "체크박스 옆에 표시되는 텍스트",
         },
