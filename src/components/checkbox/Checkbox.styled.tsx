@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { CheckboxStyles } from "./Checkbox.type";
 
-const StyledCheckboxContainer = styled.div`
+const StyledCheckboxContainer = styled.label`
     display: flex;
     align-items: center;
 `
@@ -10,12 +10,15 @@ const StyledCheckbox = styled.input.attrs<CheckboxStyles>((props) => ({
     name: props.name || props.value,
 }))`
   ${(props) => {
+        const size = props.size || "21px";
+        const islinethrough = props.islinethrough || false;
+
         return css`
             appearance: none;
             border: 1.5px solid gainsboro;
-            border-radius: 0.35rem;
-            width: 1.5rem;
-            height: 1.5rem;
+            border-radius: 5px;
+            width: ${size};
+            height: ${size};
 
             &:checked {
                 border-color: transparent;
@@ -25,13 +28,32 @@ const StyledCheckbox = styled.input.attrs<CheckboxStyles>((props) => ({
                 background-repeat: no-repeat;
                 background-color: ${props => props.theme.colors.pantone};
             }
+            &:checked + p {
+                text-decoration: ${(islinethrough ? "line-through" : "none")};
+                color:  ${props => props.theme.colors.gray};
+            }
         `
     }}
   
   `;
 
-const StyledP = styled.p`
-    padding-bottom: 5px;
-    padding-left: 3px;
-`
+const StyledP = styled.p.attrs<CheckboxStyles>((props) => ({
+}))`
+  ${(props) => {
+        const size = props.size || "21px";
+        const fontsize = `${parseInt(size) - 3}px`;
+
+        return css`
+            font-size  : ${fontsize};
+            padding-left: 3px;
+
+            user-select: none; 
+            -webkit-user-select: none; 
+            -moz-user-select: none;
+            -ms-user-select: none;
+        `
+    }}
+  
+  `;
+
 export { StyledCheckboxContainer, StyledP, StyledCheckbox };

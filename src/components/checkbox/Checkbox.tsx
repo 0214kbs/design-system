@@ -8,7 +8,7 @@ const Checkbox = (props: CheckboxStyles) => {
         <>
             <StyledCheckboxContainer>
                 <StyledCheckbox type="checkbox" {...props} />
-                <StyledP>{props.text}</StyledP>
+                <StyledP {...props}>{props.text}</StyledP>
             </StyledCheckboxContainer>
         </>
     )
